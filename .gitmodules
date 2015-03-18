@@ -1,3 +1,6 @@
 [submodule "models/SparkFun_3D_Models"]
 	path = models/SparkFun_3D_Models
 	url = https://github.com/sparkfun/3D_Models
+[submodule "models/eagleUp_3D_Models"]
+	path = models/eagleUp_3D_Models
+	url = https://github.com/eagleUp/eagleUp
