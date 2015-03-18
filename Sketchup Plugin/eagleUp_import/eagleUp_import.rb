@@ -16,9 +16,9 @@ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSE
 ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
 NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-Author: J.Lamy
+Author: J.Lamy & Neil McNeight
 Name: eagleUp_import
-Version: 4.5
+Version: 4.6
 SU Version: 8
 =end
 
@@ -554,7 +554,7 @@ class EagleUp
 					next
 				end
 			else
-				if File.basename(lookup_file) == initial_elements[6] + ".skp"
+				if File.basename(lookup_file.upcase) == initial_elements[6] + ".SKP"
 					return File.expand_path(lookup_file)
 				end
 			end
@@ -903,7 +903,7 @@ end
 
 plugins_menu = UI.menu("Plugins")
 
-plugins_menu.add_item("Import eagleUp v4.5"){
+plugins_menu.add_item("Import eagleUp v4.6"){
 	eagle_up = EagleUp.new.import()
 }
 
